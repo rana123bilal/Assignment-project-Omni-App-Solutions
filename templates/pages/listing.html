@@ -1,0 +1,43 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div class="container-fluid">
+
+    <div class="content-wrapper">
+		<div class="item-container">
+			<div class="container">
+				<div class="col-md-12">
+					<h2>Movie Listings @ GV Cinema</h2><br><br>
+					<div class="product col-md-3 service-image-left">
+
+						<center>
+							<img id="item-display" src="{{ listing.photo_main.url }}" alt=""></img>
+						</center>
+					</div>
+
+
+				</div>
+
+				<div class="col-md-7">
+                    <div class="product-title"><h1>{{listing.movie_name}}</h1></div>
+					<div class="product-desc">Rating : {{listing.user_ratings}}</div>
+                    <div class="product-desc">Duration : {{listing.duration}} Minutes</div>
+					<div class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div>
+					<hr>
+                    <div class="product-price"><h3> Description</h3> </div>
+                    <div class="product-price">{{listing.description}} </div>
+                    <div class="product-price"><h3>Language : </h3> {{listing.language}} </div>
+					<div class="product-stock"><h3>Genre : </h3> </div>
+                    <div class="product-price">{{listing.genre}} </div>
+					<hr>
+					<div class="btn-group cart">
+						 <a style="margin-top: 10px;" href="{% url 'index' %}" class="btn btn-success">Back</a>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
